@@ -10,8 +10,8 @@ public class InsertionSort {
             while (j >= 0 && key < numbers[j]) {
                 numbers[j + 1] = numbers[j];
                 j--;
-
             }
+
             numbers[j + 1] = key;
         }
 
