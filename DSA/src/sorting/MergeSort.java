@@ -4,11 +4,13 @@ public class MergeSort {
     public static void main(String[] args) {
         int[] numbers = {88, 77, 66, 55, 44, 33, 22, 11, -20, -1, -4, -5, 87, 555, 222, 1, 2, 0, 99};
 
+        mergeSort(numbers, 0, numbers.length - 1);
+        printArray(numbers);
     }
 
     public static void mergeSort(int[] data, int start, int end) {
         if (start < end) {
-            int mid = start + (end - start) / 2;
+            int mid = (start + end) / 2;
             mergeSort(data, start, mid);
             mergeSort(data, mid + 1, end);
             merge(data, start, mid, end);
@@ -40,13 +42,19 @@ public class MergeSort {
         }
 
         while (j <= end) {
-            temp[k] = data[i];
+            temp[k] = data[j];
             j++;
             k++;
         }
 
         for (i = start; i <= end; i++) {
             data[i] = temp[i - start];
+        }
+    }
+
+    public static void printArray(int[] array) {
+        for (int j : array) {
+            System.out.print(j + " ");
         }
     }
 }
