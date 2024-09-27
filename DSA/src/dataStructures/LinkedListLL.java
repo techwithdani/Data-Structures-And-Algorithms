@@ -21,6 +21,18 @@ public class LinkedListLL {
         size++;
     }
 
+    public void insertLast(int val) {
+        if (tail == null) {
+            insertFirst(val);
+            return;
+        }
+
+        Node newNode = new Node(val);
+        tail.next = newNode;
+        tail = newNode;
+        size++;
+    }
+
     public void display() {
         Node temp = head;
 

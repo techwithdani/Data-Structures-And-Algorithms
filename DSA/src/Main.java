@@ -11,6 +11,12 @@ public class Main {
         linkedList.insertFirst(5);
         linkedList.insertFirst(6);
 
+        linkedList.insertLast(8);
+        linkedList.insertLast(22);
+        linkedList.insertLast(55);
+        linkedList.insertLast(44);
+
+
         linkedList.display();
     }
 }
