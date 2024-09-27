@@ -21,8 +21,19 @@ public class LinkedListLL {
         size++;
     }
 
-    private class Node {
-        private int value;
+    public void display() {
+        Node temp = head;
+
+        while (temp != null) {
+            System.out.print(temp.value + " -> ");
+            temp = temp.next;
+        }
+
+        System.out.print("END");
+    }
+
+    private static class Node {
+        private final int value;
         private Node next;
 
         public Node(int value) {
