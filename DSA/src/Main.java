@@ -16,6 +16,10 @@ public class Main {
         linkedList.insertLast(55);
         linkedList.insertLast(44);
 
+        linkedList.insertRandom(54, 5);
+        linkedList.insertRandom(45, 2);
+        linkedList.insertRandom(55, 7);
+
 
         linkedList.display();
     }

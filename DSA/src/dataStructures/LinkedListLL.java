@@ -33,6 +33,28 @@ public class LinkedListLL {
         size++;
     }
 
+    public void insertRandom(int val, int index) {
+        if (index == 0) {
+            insertFirst(val);
+            return;
+        }
+
+        if (index == size) {
+            insertLast(val);
+            return;
+        }
+
+        Node temp = head;
+
+        for (int i = 1; i < index; i++) {
+            temp = temp.next;
+        }
+
+        temp.next = new Node(val, temp.next);
+
+        size++;
+    }
+
     public void display() {
         Node temp = head;
 
