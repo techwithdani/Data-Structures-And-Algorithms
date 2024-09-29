@@ -67,6 +67,29 @@ public class LinkedListLL {
         return val;
     }
 
+    public int deleteLast() {
+        if (size <= 1) {
+            return deleteFirst();
+        }
+
+        int val = tail.value;
+        tail = get(size - 2);
+        tail.next = null;
+
+        size--;
+        return val;
+    }
+
+    public Node get(int index) {
+        Node node = head;
+
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+
+        return node;
+    }
+
     public void display() {
         Node temp = head;
 

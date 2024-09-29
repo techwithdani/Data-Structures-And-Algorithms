@@ -28,5 +28,12 @@ public class Main {
         linkedList.deleteFirst();
 
         linkedList.display();
+        System.out.println();
+
+        linkedList.deleteLast();
+        linkedList.deleteLast();
+        linkedList.deleteLast();
+
+        linkedList.display();
     }
 }
