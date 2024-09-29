@@ -20,6 +20,12 @@ public class Main {
         linkedList.insertRandom(45, 2);
         linkedList.insertRandom(55, 7);
 
+        linkedList.display();
+        System.out.println();
+
+        linkedList.deleteFirst();
+        linkedList.deleteFirst();
+        linkedList.deleteFirst();
 
         linkedList.display();
     }
