@@ -25,14 +25,18 @@ public class Main {
 
         linkedList.deleteFirst();
         linkedList.deleteFirst();
-        linkedList.deleteFirst();
 
         linkedList.display();
         System.out.println();
 
         linkedList.deleteLast();
         linkedList.deleteLast();
-        linkedList.deleteLast();
+
+        linkedList.display();
+        System.out.println();
+
+        linkedList.deleteRandom(4);
+        linkedList.deleteRandom(5);
 
         linkedList.display();
     }

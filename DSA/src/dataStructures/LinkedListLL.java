@@ -80,6 +80,23 @@ public class LinkedListLL {
         return val;
     }
 
+    public int deleteRandom(int index) {
+        if (index == 0) {
+            return deleteFirst();
+        }
+
+        if (index == size - 1) {
+            return deleteLast();
+        }
+
+        Node prev = get(index - 1);
+        Node indexValue = get(index);
+
+        prev.next = indexValue.next;
+
+        return indexValue.value;
+    }
+
     public Node get(int index) {
         Node node = head;
 
