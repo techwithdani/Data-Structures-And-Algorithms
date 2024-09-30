@@ -72,12 +72,11 @@ public class LinkedListLL {
             return deleteFirst();
         }
 
-        int val = tail.value;
         tail = get(size - 2);
         tail.next = null;
 
         size--;
-        return val;
+        return tail.value;
     }
 
     public int deleteRandom(int index) {
@@ -90,11 +89,9 @@ public class LinkedListLL {
         }
 
         Node prev = get(index - 1);
-        Node indexValue = get(index);
+        prev.next = prev.next.next;
 
-        prev.next = indexValue.next;
-
-        return indexValue.value;
+        return prev.next.value;
     }
 
     public Node get(int index) {
