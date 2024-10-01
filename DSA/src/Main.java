@@ -1,25 +1,20 @@
-import dataStructures.LinkedListLL;
+import dataStructures.*;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedListLL linkedList = new LinkedListLL();
+        DoublyLinkedListLL list = new DoublyLinkedListLL();
 
-        linkedList.insertFirst(1);
-        linkedList.insertFirst(2);
-        linkedList.insertFirst(3);
-        linkedList.insertFirst(4);
-        linkedList.insertFirst(5);
-        linkedList.insertFirst(6);
+        list.insertFirst(22);
+        list.insertFirst(54);
+        list.insertFirst(87);
+        list.insertFirst(4);
+        list.insertFirst(5);
 
-        linkedList.insertLast(8);
-        linkedList.insertLast(22);
-        linkedList.insertLast(55);
-        linkedList.insertLast(44);
+        list.insertLast(44);
+        list.insertLast(55);
 
-        linkedList.insertRandom(54, 5);
-        linkedList.insertRandom(45, 2);
-        linkedList.insertRandom(55, 7);
+        list.insert(22, 6);
 
-        linkedList.display();
+        list.display();
     }
 }
