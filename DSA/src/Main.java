@@ -1,19 +1,16 @@
 import dataStructures.*;
 
 public class Main {
-    public static void main(String[] args) {
-         CircularLinkedListLL list = new CircularLinkedListLL();
+    public static void main(String[] args) throws StackException {
+         Stacks customStack = new Stacks(5);
 
-         list.insert(11);
-         list.insert(22);
-         list.insert(33);
-         list.insert(44);
-         list.insert(55);
+         customStack.push(44);
+         customStack.push(55);
+         customStack.push(66);
+         customStack.push(88);
+         customStack.push(99);
 
-         list.display();
-
-         list.delete(33);
-
-         list.display();
+         System.out.println(customStack.pop());
+         System.out.println(customStack.peek());
     }
 }

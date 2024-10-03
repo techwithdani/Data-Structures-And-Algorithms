@@ -14,9 +14,9 @@ public class Stacks {
         this.data = new int[size];
     }
 
-    public boolean push(int value) throws Exception {
+    public boolean push(int value) throws StackException {
         if (isFull()) {
-            throw new Exception("Stack is Full!!");
+            throw new StackException("Stack is Full!!");
         }
 
         pointer++;
@@ -24,9 +24,9 @@ public class Stacks {
         return true;
     }
 
-    public int pop() throws Exception {
+    public int pop() throws StackException {
         if (isEmpty()) {
-            throw new Exception("Stack is Empty!!");
+            throw new StackException("Stack is Empty!!");
         }
 
         int removedElement = data[pointer];
@@ -34,9 +34,9 @@ public class Stacks {
         return removedElement;
     }
 
-    public int peek() throws Exception {
+    public int peek() throws StackException {
         if (isEmpty()) {
-            throw new Exception("Cannot peek from an empty Stack!!");
+            throw new StackException("Cannot peek from an empty Stack!!");
         }
 
         return data[pointer];
