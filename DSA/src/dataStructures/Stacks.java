@@ -1,21 +1,52 @@
 package dataStructures;
 
-import java.util.Stack;
-
 public class Stacks {
-    public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
+    protected int[] data;
+    private static final int DEFAULT_SIZE = 10;
 
-        stack.push(1);
-        stack.push(4);
-        stack.push(6);
-        stack.push(8);
-        stack.push(10);
-        stack.push(12);
+    int pointer = -1;
 
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
+    public Stacks() {
+        this(DEFAULT_SIZE);
+    }
+
+    public Stacks(int size) {
+        this.data = new int[size];
+    }
+
+    public boolean push(int value) throws Exception {
+        if (isFull()) {
+            throw new Exception("Stack is Full!!");
+        }
+
+        pointer++;
+        data[pointer] = value;
+        return true;
+    }
+
+    public int pop() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Stack is Empty!!");
+        }
+
+        int removedElement = data[pointer];
+        pointer--;
+        return removedElement;
+    }
+
+    public int peek() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Cannot peek from an empty Stack!!");
+        }
+
+        return data[pointer];
+    }
+
+    private boolean isFull() {
+        return pointer == data.length - 1;
+    }
+
+    private boolean isEmpty() {
+        return pointer == -1;
     }
 }
