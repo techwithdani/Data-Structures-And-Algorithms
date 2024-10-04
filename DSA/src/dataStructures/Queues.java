@@ -1,22 +1,24 @@
 package dataStructures;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class Queues {
-    public static void main(String[] args) {
-        Queue<Integer> queue = new LinkedList<>();
+    protected int[] data;
+    private static final int DEFAULT_SIZE = 10;
 
-        queue.add(2);
-        queue.add(6);
-        queue.add(8);
-        queue.add(10);
-        queue.add(22);
-        queue.add(44);
+    int endPointer = 0;
 
-        System.out.println(queue.peek());
-        queue.remove();
-        queue.remove();
-        System.out.println(queue.peek());
+    public Queues() {
+        this(DEFAULT_SIZE);
+    }
+
+    public Queues(int size) {
+        this.data = new int[size];
+    }
+
+    public boolean isFull() {
+        return endPointer == data.length;
+    }
+
+    public boolean isEmpty() {
+        return endPointer == 0;
     }
 }
