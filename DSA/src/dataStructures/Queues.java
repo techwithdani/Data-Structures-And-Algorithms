@@ -14,6 +14,15 @@ public class Queues {
         this.data = new int[size];
     }
 
+    public boolean insert(int value) {
+        if (isFull()) {
+            return false;
+        }
+
+        data[endPointer++] = value;
+        return true;
+    }
+
     public boolean isFull() {
         return endPointer == data.length;
     }
