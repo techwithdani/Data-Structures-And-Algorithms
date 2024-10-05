@@ -16,6 +16,28 @@ public class CircularQueue {
         this.data = new int[size];
     }
 
+    public boolean insert(int value) {
+        if (isFull()) {
+            return false;
+        }
+
+        data[endPointer++] = value;
+        endPointer = endPointer % data.length;
+        size++;
+        return true;
+    }
+
+    public int remove() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Queue is Empty!!");
+        }
+
+        int removed = data[frontPointer++];
+        frontPointer = frontPointer % data.length;
+        size--;
+        return removed;
+    }
+
     public boolean isFull() {
         return size == data.length;
     }
