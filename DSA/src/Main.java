@@ -11,8 +11,7 @@ public class Main {
         queue.insert(1);
         queue.insert(10);
 
-        System.out.println(queue.peek());
-        System.out.println(queue.remove());
+        queue.display();
 
         System.out.println(queue.peek());
         System.out.println(queue.remove());
@@ -28,5 +27,10 @@ public class Main {
 
         System.out.println(queue.peek());
         System.out.println(queue.remove());
+
+        System.out.println(queue.peek());
+        System.out.println(queue.remove());
+
+        queue.display();
     }
 }

@@ -46,6 +46,13 @@ public class Queues {
         return data[0];
     }
 
+    public void display() {
+        for (int i = 0; i < endPointer; i++) {
+            System.out.print(data[i] + " <- ");
+        }
+        System.out.println("END");
+    }
+
     public boolean isFull() {
         return endPointer == data.length;
     }
