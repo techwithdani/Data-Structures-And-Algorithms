@@ -28,11 +28,14 @@ public class Queues {
             throw new Exception("Queue is Empty!!");
         }
 
-        for(int i = 0; i < endPointer - 1; i++) {
-            data[i] = data[i + 1];
+        int removed = data[0];
+
+        for(int i = 1; i < endPointer; i++) {
+            data[i - 1] = data[i];
         }
 
-        return data[0];
+        endPointer--;
+        return removed;
     }
 
     public int peek() throws Exception {

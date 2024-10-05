@@ -12,13 +12,21 @@ public class Main {
         queue.insert(10);
 
         System.out.println(queue.peek());
-
-        queue.remove();
-        queue.remove();
-        queue.remove();
-        queue.remove();
-        queue.remove();
+        System.out.println(queue.remove());
 
         System.out.println(queue.peek());
+        System.out.println(queue.remove());
+
+        System.out.println(queue.peek());
+        System.out.println(queue.remove());
+
+        System.out.println(queue.peek());
+        System.out.println(queue.remove());
+
+        System.out.println(queue.peek());
+        System.out.println(queue.remove());
+
+        System.out.println(queue.peek());
+        System.out.println(queue.remove());
     }
 }
