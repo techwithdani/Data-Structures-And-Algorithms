@@ -18,6 +18,7 @@ public class CircularQueue {
 
     public boolean insert(int value) {
         if (isFull()) {
+            System.out.println("Out of bounds!!");
             return false;
         }
 
@@ -44,6 +45,21 @@ public class CircularQueue {
         }
 
         return data[frontPointer];
+    }
+
+    public void display() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Queue is Empty!!");
+        }
+
+        int i = frontPointer;
+
+        do {
+            System.out.print(data[i] + " -> ");
+            i++;
+            i %= data.length;
+        } while (i != endPointer);
+        System.out.println("END");
     }
 
     public boolean isFull() {

@@ -2,34 +2,21 @@ import dataStructures.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Queues queue = new Queues(6);
+        CircularQueue queue = new CircularQueue(6);
 
-        queue.insert(9);
-        queue.insert(8);
-        queue.insert(7);
+        queue.insert(2);
+        queue.insert(4);
         queue.insert(6);
-        queue.insert(1);
+        queue.insert(8);
         queue.insert(10);
+        queue.insert(12);
 
         queue.display();
 
-        System.out.println(queue.peek());
-        System.out.println(queue.remove());
+        queue.remove();
 
+        queue.insert(55);
         System.out.println(queue.peek());
-        System.out.println(queue.remove());
-
-        System.out.println(queue.peek());
-        System.out.println(queue.remove());
-
-        System.out.println(queue.peek());
-        System.out.println(queue.remove());
-
-        System.out.println(queue.peek());
-        System.out.println(queue.remove());
-
-        System.out.println(queue.peek());
-        System.out.println(queue.remove());
 
         queue.display();
     }

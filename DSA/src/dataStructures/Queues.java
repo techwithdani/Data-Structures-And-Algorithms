@@ -16,6 +16,7 @@ public class Queues {
 
     public boolean insert(int value) {
         if (isFull()) {
+            System.out.println("Out of Bounds!!");
             return false;
         }
 
