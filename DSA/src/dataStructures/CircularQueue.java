@@ -38,6 +38,14 @@ public class CircularQueue {
         return removed;
     }
 
+    public int peek() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Cannot peek from an empty Queue!!");
+        }
+
+        return data[frontPointer];
+    }
+
     public boolean isFull() {
         return size == data.length;
     }
