@@ -55,7 +55,7 @@ public class CircularQueue {
         int i = frontPointer;
 
         do {
-            System.out.print(data[i] + " -> ");
+            System.out.print(data[i] + " <- ");
             i++;
             i %= data.length;
         } while (i != endPointer);
